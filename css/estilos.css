@@ -1,0 +1,59 @@
+/* Propiedades personalizadas */
+
+:root{
+    --blanco: #ffffff;
+    --negro: #000000;
+    --Texto: #757575;
+}
+
+/* Estos dos selectores sirven para que 
+   1rem sea igual a 10px */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    color: var(--Texto);
+    font-family: 'Estonia', cursive;
+}
+
+/* Globales */
+
+.tamaño-fuente{ 
+    font-size: 5rem!important;
+}
+
+/* Aqui terminan los selectores que nos
+   ayudarán con los rem */
+
+h1{
+    color: var(--negro);
+    text-align: center;
+    font-size: 10rem;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+
+}
+
+.navegacion__ul{
+    margin: 2rem;
+}
+
+.navegacion__li{
+    padding: 1rem;
+    padding-left: 0px;
+}
+
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;
+}
