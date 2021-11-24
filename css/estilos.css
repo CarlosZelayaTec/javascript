@@ -28,6 +28,13 @@ body{
 /* Aqui terminan los selectores que nos
    ayudarán con los rem */
 
+.contenedor_header{
+    margin: 1rem 1rem 0 1rem;
+    padding: 1rem;
+    background-color: salmon;
+    border-radius: 1.5rem;
+}
+
 h1{
     color: var(--negro);
     text-align: center;
@@ -56,4 +63,14 @@ nav a{
 .contenedor{
     width: 120rem;
     margin: 0 auto;
+}
+
+.contenedor p{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: lime;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 1.5rem;
 }
