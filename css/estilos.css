@@ -42,22 +42,18 @@ h1{
 }
 
 nav a{
+    color: var(--blanco);
     text-decoration: none;
+    background-color: var(--negro);
+    padding: 1rem 7rem;
+    border-radius: 3rem;
+    font-weight: bolder;
 }
 
 .navegacion {
     display: flex;
-    justify-content: center;
-
-}
-
-.navegacion__ul{
-    margin: 2rem;
-}
-
-.navegacion__li{
-    padding: 1rem;
-    padding-left: 0px;
+    justify-content: space-between;
+    margin: 2rem 4rem;
 }
 
 .contenedor{
