@@ -1,16 +1,24 @@
 
-    // let numeros = [5,6,7,2,56,3];
+let arreglo = ["futbol", "java", "javascript", "perl", "ruby", "aguacate"];
 
-    // let nuevoArreglo = numeros.filter(function(numero){
-    //     return numero % 2 === 0;
-    // });
+// indexOf => posición
+// includes => true/false
 
-    // console.log(nuevoArreglo);
+console.log(arreglo.indexOf("java"));
+console.log(arreglo.includes("java", 1)); // el segundo argumento permite decirle al programa a partir de que indice empezar a buscar.
 
-let lenguajes = ["ruby", "java", "c++", "python"];
+// find -> funcion prueba -> elemento encontrado
+// findIndex -> funcion prueba -> posicion
+// some -> funcion prueba -> true/false
 
-let nuevoArreglo = lenguajes.filter(function(lenguaje){
-    return lenguaje != "ruby";
+let respuesta = arreglo.find(function(elemento, posicion, arreglo){
+    return elemento === "java";
+});
+let respuesta = arreglo.findIndex(function(elemento, posicion, arreglo){
+    return elemento === "java";
+});
+let respuesta = arreglo.some(function(elemento, posicion, arreglo){
+    return elemento === "java";
 });
 
-console.log(nuevoArreglo);
+// console.log(respuesta);
