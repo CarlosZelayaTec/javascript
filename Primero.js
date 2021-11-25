@@ -1,23 +1,37 @@
 
-// Arreglos
+// metodo map
 
-// let arreglo = ["rails", "laravel", "django", 1, {}, function(){}, [1,3,5]];
+let numeros = [2,3,1,5,34];
 
-// arreglo.push("Nuevo"); //Agrega este nuevo elemento al final del arreglo.
-// arreglo.unshift("Primero"); //Agrega este elemento al comienzo del arreglo.
-// // arreglo.pop(); // Elimina el ultimo elemento del arreglo.
-// // arreglo.shift(); //Elimina el primer elemento del arreglo.
+/* 
+    let cuadrados = [];
 
-// console.log(arreglo);
+    for (let i = 0; numeros.length; i++){
+        cuadrados[i] = numeros[i] * numeros[i];
+    }
 
-//For each
+    console.log(cuadrados);
+*/
 
-let lenguajes = ["ruby", "php", "javascript", "python"];
-
-lenguajes.forEach(function(lenguaje, indice, arreglo){
-    console.log(lenguaje + " " + indice, arreglo);
+let cuadrados = numeros.map(function(numero){
+    return numero * numero;
 });
 
-// lenguajes.forEach(function(lenguaje, indice, arreglo){
-//     console.log(this);
-// }, "asigna el valor nuevo al arreglo");
+console.log(numeros);
+console.log(cuadrados);
+
+/* 
+    2 => [4]
+    3 => [4, 9]
+    1 => [4, 9, 1]
+    5 => [4, 9, 1, 25]
+    34 => [4, 9, 1, 25, 1156]
+*/
+
+let cadenaNumeros = ["10", "15", "5", "2"];
+
+let numerosInt = cadenaNumeros.map(function(numString){
+    return parseInt(numString);
+});
+
+console.log(numerosInt);
