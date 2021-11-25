@@ -1,24 +1,15 @@
 
-let arreglo = ["futbol", "java", "javascript", "perl", "ruby", "aguacate"];
+// let arreglo = [1,2,3,4,5,6];
+// let nombre = "Carlos";
 
-// indexOf => posición
-// includes => true/false
+// console.log(arreglo);
+// console.log(...arreglo); //Spread syntax
+// console.log(...nombre); //Spread syntax
 
-console.log(arreglo.indexOf("java"));
-console.log(arreglo.includes("java", 1)); // el segundo argumento permite decirle al programa a partir de que indice empezar a buscar.
+// Rest Parameters (...)
 
-// find -> funcion prueba -> elemento encontrado
-// findIndex -> funcion prueba -> posicion
-// some -> funcion prueba -> true/false
+function promedio(alumno, ...calificaciones){
+    console.log(alumno, calificaciones);
+}
 
-let respuesta = arreglo.find(function(elemento, posicion, arreglo){
-    return elemento === "java";
-});
-let respuesta = arreglo.findIndex(function(elemento, posicion, arreglo){
-    return elemento === "java";
-});
-let respuesta = arreglo.some(function(elemento, posicion, arreglo){
-    return elemento === "java";
-});
-
-// console.log(respuesta);
+promedio("Carlos", 9,8,7,9,8,7);
