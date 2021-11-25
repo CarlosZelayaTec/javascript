@@ -1,14 +1,17 @@
 
-function hola(nombre) {
-    if(nombre){
-        var saludo = "Hola " + nombre; //Con var podemos tener el alcance a cualquier parte dentro de la función.
-        //let saludo = "Hola" + nombre;     Aparentemente es el mismo código pero no es así.
-                                        //ya que con let solo tenemos alcance dentro del bloque.
-                                        //Asi que usando let la variable saludo solo estará disonible dentro del bloque IF.
-                                        //Lo mismo pasa con Const.
-    }
+//Función pura: No produce efectos  secundarios.
 
-    console.log(saludo);
+let edades = [20];
+
+function modificador(edades) {
+    let copia = [...edades]; //Genero una copia
+    copia[0] = 25; //Modifico la copia y no el valor original.
+    return copia; //Para comunicar los cambios con el exterior es preferible utilizar la copia.
 }
 
-hola("Carlos");
+console.log(edades); //Imprime el primer valor de edades. linea 4
+modificador(edades); // Modifica el valor de edades ya que estamos utilizando un valor de referencia
+                    // Para eso creamos una copia y el valor original no sea afecatado.
+console.log(edades); // El valor original no ha sido cambiado ya que creamos una copia del arreglo.
+
+// Y basicamente eso es una Funcio Pura.
