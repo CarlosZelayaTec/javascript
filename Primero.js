@@ -1,37 +1,16 @@
 
-// metodo map
+    // let numeros = [5,6,7,2,56,3];
 
-let numeros = [2,3,1,5,34];
+    // let nuevoArreglo = numeros.filter(function(numero){
+    //     return numero % 2 === 0;
+    // });
 
-/* 
-    let cuadrados = [];
+    // console.log(nuevoArreglo);
 
-    for (let i = 0; numeros.length; i++){
-        cuadrados[i] = numeros[i] * numeros[i];
-    }
+let lenguajes = ["ruby", "java", "c++", "python"];
 
-    console.log(cuadrados);
-*/
-
-let cuadrados = numeros.map(function(numero){
-    return numero * numero;
+let nuevoArreglo = lenguajes.filter(function(lenguaje){
+    return lenguaje != "ruby";
 });
 
-console.log(numeros);
-console.log(cuadrados);
-
-/* 
-    2 => [4]
-    3 => [4, 9]
-    1 => [4, 9, 1]
-    5 => [4, 9, 1, 25]
-    34 => [4, 9, 1, 25, 1156]
-*/
-
-let cadenaNumeros = ["10", "15", "5", "2"];
-
-let numerosInt = cadenaNumeros.map(function(numString){
-    return parseInt(numString);
-});
-
-console.log(numerosInt);
+console.log(nuevoArreglo);
