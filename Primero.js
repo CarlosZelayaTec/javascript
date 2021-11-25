@@ -1,20 +1,16 @@
 
-    // Declaración de Función
-function saludar() {
-    console.log("Hola");
-}
+/*
+ Scope Global
+ Scope local
+ */
 
-function cuadrado(numero) {
-    return numero * numero;
+ var nombre = "Cody";
 
-        // Esta línea no  va a ejecutarse, ya que la ejecución de una función termina con un return.
-    // console.log("Hola dev"); 
-}
+ function decirHola(){
+     var nombre = "Carlos";
+     console.log("Hola " + nombre);
+ }
 
-let numero_de_dos = cuadrado(5);
+ decirHola();
 
-console.log(numero_de_dos);
-console.log(cuadrado(8));
-
-// Expresión de función
-let func = function(){};
+ console.log(nombre);
