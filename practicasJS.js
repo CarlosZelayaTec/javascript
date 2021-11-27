@@ -4,7 +4,6 @@
 
 let divisor = (enteroPositivo) => {
     let numerosDivisibles = [];
-    let numerosNoDivisibles = [];
     let indice = 0;
 
     for (let i = 1; i < enteroPositivo; i++) {
