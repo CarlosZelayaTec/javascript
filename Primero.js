@@ -1,16 +1,17 @@
 
-class Curso{
+//Herencia
+class Human(){
 
-    #title = "JavaScript";
-
-    constructor(titulo){
-        this.titulo = titulo;
-    }
-
-    inscribir = () => console.log("Inscrito");
 }
 
-let js = new Curso("Curso de JavaScript");
+class Admin extends Human{
 
-console.log(js.#title);
-js.inscribir();
+}
+ /*-------------------*/
+function caracoles(){
+
+}
+
+class Mariscos extends caracoles{ //Se puede heredar a partir de una función todos los métodos que contiene.
+
+}

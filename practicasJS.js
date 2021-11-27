@@ -1,17 +1,23 @@
 
+//Devuelve todos los numeros en que el entero sea divisible
+// Si es un numero primo, devuelve un mensaje que diga que N es primo.
 
-numeros = [25, 10, 98, 255, 1024, 2, 69, 486];
+let divisor = (enteroPositivo) => {
+    let numerosDivisibles = [];
+    let numerosNoDivisibles = [];
+    let indice = 0;
 
-function sumaNumerosBajos(numerosA) {
-    let menorUno = Math.min(...numerosA);
-    
-    let sacar = numerosA.filter(valor =>{
-        return valor != menorUno;
-    });
+    for (let i = 1; i < enteroPositivo; i++) {
+        let residuo = enteroPositivo % i;
+        if(residuo == 0){
+            numerosDivisibles[indice] = i;
+            indice++;
+        }
+    }
 
-    let menorDos = Math.min(...sacar);
-
-    console.log(menorUno, menorDos + " = " + (menorUno + menorDos));
+    if(indice == 1){
+        console.log(enteroPositivo + " Es un numero primo")
+    }else { console.log(numerosDivisibles); }
 }
 
-sumaNumerosBajos(numeros);
+divisor(20);
