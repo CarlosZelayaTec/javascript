@@ -1,17 +1,21 @@
 
-// JavaScript Object Notation -> JSON
 
-let curso = { //Nombre Objeto
-    titulo: "Curso profesional de JavaScript", //Propiedades
-    formato: "Video",
-    bloques: ["Introducción", "Funciones"],
-    inscribir: function(){ //Tambien llamados metodos
-        console.log("Inscrito");
-    },
+let user = {
+    edad: 20,
+    nombre: "Carlos",
 }
 
-curso.inscribir();
+let esquema = {
+    nivel: 2,
+}
 
-curso.titulo = "Curso de React"; //Reescribir el valor de la propiedad.
+let copia = { ...user, ...esquema, nombre: "Carlangas" }; //Creamos una copia de los objetos y los combinamos con el Spread operator.
 
-console.log(curso.titulo);
+let copia1 = Object.assign({}, user); //Para crear una copia. Como el primer argumento son unas llaves vacías significa que esta creando una copia
+let copia2 = Object.assign(user, { permisos: true}, {formato: "DVD"} ); // El primer argumento es donde se almacenará los elementos. Aqui estamos reescribiendo el objeto User pero el resultado se almacena en copia.
+let copia3 = Object.assign(user, esquema); //Para combinar dos objetos.
+
+console.log(copia);
+console.log(copia1);
+console.log(copia2);
+console.log(copia3);
