@@ -1,22 +1,23 @@
+ 
+ /*
+    Una lista con nombre de varias personas y los nombres que contengan
+    exactamente 4 letras son amigos del usuario, de lo contrario no.
 
-//Devuelve todos los numeros en que el entero sea divisible
-// Si es un numero primo, devuelve un mensaje que diga que N es primo.
+ */
 
-let divisor = (enteroPositivo) => {
-    let numerosDivisibles = [];
-    let indice = 0;
+const nombreConocidos = ["Jimmy", "Jorge", "Blazz", "Ryan", "Pepe", "Humberto", "Precario", "Lolo", "Agustin", "Mero"];
 
-    for (let i = 1; i < enteroPositivo; i++) {
-        let residuo = enteroPositivo % i;
-        if(residuo == 0){
-            numerosDivisibles[indice] = i;
-            indice++;
+const amigos = (listaConocidos) => {
+    let amigos = [];
+    let i = 0;
+    listaConocidos.forEach(nombres => {
+        if(nombres.length === 4) { 
+            amigos[i] = nombres;
+            i++; 
         }
-    }
+    })
 
-    if(indice == 1){
-        console.log(enteroPositivo + " Es un numero primo")
-    }else { console.log(numerosDivisibles); }
+    console.log(listaConocidos, " = ", amigos);
 }
 
-divisor(20);
+amigos(nombreConocidos);
