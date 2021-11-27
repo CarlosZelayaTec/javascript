@@ -37,3 +37,17 @@ let e = new Estudiantes();
 e.saludar();
 
 //Al usarlo de esta manera podemos utilizarlo como argumento y reasignarlo y su contexto no cambiará, osea no nos dará error.
+
+function Estudiantess(){
+    this.nombre = "Carlangas";
+    this.saludar = function() {console.log(this)};
+
+    // this.saludar = this.saludar.bind(this); // Esta linea me esta confirmando que en todo momento el contexto va a conservarse.
+}
+
+let ee = new Estudiantess();
+
+ee.saludar.call({}, "1", "2"); //metodos para darle valor a this.
+ee.saludar.apply({}, ["1", "2"]);
+
+let nuevaFuncion = e.saludar.bind({}); //Crea y le da un valor a this pero no la ejecuta.
